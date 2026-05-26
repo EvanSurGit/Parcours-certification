@@ -1,0 +1,91 @@
+/* Reset & Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    background-color: #000; color: #00ff00;
+    font-family: 'Share Tech Mono', 'Courier New', Courier, monospace;
+    line-height: 1.6; overflow-x: hidden;
+}
+
+#matrix { position: fixed; top: 0; left: 0; z-index: -1; }
+
+::-webkit-scrollbar { width: 10px; background: #000; border-left: 1px solid #00ff00; }
+::-webkit-scrollbar-thumb { background: #00ff00; }
+
+.navbar { position: fixed; top: 0; width: 100%; background-color: rgba(0, 0, 0, 0.9); border-bottom: 1px solid #00ff00; padding: 15px 0; z-index: 100; }
+.navbar ul { list-style: none; display: flex; justify-content: center; gap: 30px; }
+.navbar a { color: #008800; text-decoration: none; font-weight: bold; transition: 0.3s; }
+.navbar a.is-active, .navbar a:hover { color: #00ff00; text-shadow: 0 0 8px #00ff00; }
+
+.header-hacker { margin-top: 120px; text-align: center; padding: 20px; text-shadow: 0 0 10px #00ff00; height: 80px;}
+.cursor { animation: blink 1s infinite; display: inline-block; width: 12px; height: 24px; background-color: #00ff00; vertical-align: middle; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+main { max-width: 900px; margin: 0 auto; padding: 20px; }
+.terminal-window {
+    background-color: rgba(5, 5, 5, 0.85); backdrop-filter: blur(5px);
+    border: 1px solid #00ff00; border-radius: 4px; margin-bottom: 40px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+}
+.terminal-header { background-color: #00ff00; color: #000; font-weight: bold; padding: 8px 15px; }
+.terminal-body { padding: 25px; }
+
+.warning { color: #ff003c; text-shadow: 0 0 5px #ff003c; font-weight: bold; }
+.highlight { color: #00ffff; font-weight: bold; }
+
+.reveal { opacity: 0; transform: translateY(30px); }
+.reveal.is-in { opacity: 1; transform: translateY(0); }
+
+.cmd-btn { background: #000; color: #00ff00; border: 1px solid #00ff00; padding: 10px 20px; cursor: pointer; font-family: inherit; font-weight: bold; transition: 0.2s; }
+.cmd-btn:hover { background: #00ff00; color: #000; box-shadow: 0 0 10px #00ff00;}
+.cmd-btn-small { background: transparent; color: #000; border: none; font-weight: bold; cursor: pointer; font-size: 1.2em;}
+
+.grid-certifs { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.folder { border: 1px dashed #00ff00; padding: 20px 15px; text-align: center; cursor: pointer; transition: 0.3s; background: rgba(0, 255, 0, 0.05); font-weight: bold; }
+.folder:hover { background: #00ff00; color: #000; transform: scale(1.05); }
+
+/* MODALE & CARROUSEL AVANCÉ */
+.modal { margin: auto; border: none; background: transparent; width: 95%; max-width: 900px; }
+.modal::backdrop { background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(4px); }
+.modal__grid { display: grid; gap: 25px; }
+@media (min-width: 768px) {
+    .modal__grid { grid-template-columns: 1fr 1.5fr; } 
+}
+
+.carousel { position: relative; width: 100%; background: #000; border: 1px solid #00ff00; padding: 5px; height: fit-content;}
+.carousel__slides { position: relative; height: 250px; overflow: hidden; }
+.carousel__slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s; }
+.carousel__slide.active { opacity: 1; z-index: 1; }
+.carousel__btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,255,0,0.5); color: #000; border: none; padding: 12px; cursor: pointer; z-index: 10; font-weight: bold; transition: 0.2s;}
+.carousel__btn:hover { background: #00ff00; }
+.carousel__btn--prev { left: 5px; }
+.carousel__btn--next { right: 5px; }
+.carousel__dots { display: flex; justify-content: center; gap: 8px; margin-top: 10px; }
+.carousel__dot { width: 12px; height: 12px; background: #333; border: 1px solid #00ff00; cursor: pointer; }
+.carousel__dot.active { background: #00ff00; box-shadow: 0 0 5px #00ff00;}
+
+/* Nouveaux styles pour les rubriques d'analyse */
+.analysis-block { margin-bottom: 20px; background: rgba(0, 255, 0, 0.02); padding: 10px; border-left: 2px solid #333;}
+.analysis-title { color: #00ffff; font-size: 1.1em; border-bottom: 1px dashed #00ffff; margin-bottom: 8px; display: inline-block; padding-bottom: 2px;}
+.analysis-text { color: #ccc; font-size: 0.95em; margin-bottom: 5px;}
+.tag { display: inline-block; background: #00ff00; color: #000; padding: 3px 8px; font-size: 0.85em; font-weight: bold; margin: 5px 5px 0 0; }
+
+/* Conteneur 3D Live (The Creep) */
+.three-container {
+    width: 100%;
+    height: 250px;
+    background-color: #050505;
+    border: 1px solid #00ff00;
+    margin-bottom: 15px;
+    position: relative;
+    box-shadow: inset 0 0 30px rgba(0, 255, 0, 0.1);
+    overflow: hidden;
+}
+.three-label {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 0.7em;
+    color: #00ff00;
+    background: rgba(0,0,0,0.8);
+    padding: 2px 5px;
+}
