@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Parcours Certification - Evan ETHEVE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="matrix"></canvas>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#presentation" class="nav__link">> ./profil_et_projet</a></li>
+            <li><a href="#offre" class="nav__link">> ./strategie_certif</a></li>
+            <li><a href="#certifs" class="nav__link">> ./catalogue</a></li>
+            <li><a href="#focus-projet" class="nav__link">> ./focus_the_creep</a></li>
+            <li><a href="#contact" class="nav__link">> ./contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="header-hacker">
+        <h1>> <span id="typed"></span><span class="cursor">_</span></h1>
+    </header>
+
+    <main>
+        <!-- CRITÈRES 1 & 3 : PROJET PRO ET BESOINS -->
+        <section id="presentation" class="terminal-window reveal">
+            <div class="terminal-header">root@bts-sio:~# cat profil_et_projet.txt</div>
+            <div class="terminal-body">
+                <p>Bonjour, je suis <strong>Evan ETHEVE</strong>, étudiant en <strong>BTS SIO (option SLAM)</strong> au Lycée Georges Brassens.</p>
+                <br>
+                <p class="highlight">> [ CRITÈRE 1 ] : Pourquoi j'ai ressenti le besoin de me certifier</p>
+                <p>Mon but, après mes études, c'est de devenir développeur (dans le web ou le logiciel). Pendant mes deux années de BTS, on a appris énormément de choses fondamentales pour créer des applications. Mais le monde de l'informatique est tellement vaste qu'on ne peut pas tout voir en classe.</p>
+                <br>
+                <p>Je me suis vite rendu compte qu'il me manquait des connaissances pratiques sur des sujets qui m'intéressent beaucoup : par exemple, comment intégrer de la 3D dans un navigateur web, comment vraiment sécuriser mon code contre les attaques, ou encore comment être sûr que mes sites respectent la loi sur les données personnelles (le RGPD).</p>
+                <br>
+                <p class="highlight">> [ CRITÈRE 3 ] : Le lien avec mon projet professionnel</p>
+                <p>C'est exactement pour combler ces manques que j'ai décidé de passer des certifications de mon côté. Ce portfolio n'est pas juste une liste de diplômes, c'est la preuve que j'essaie de construire un profil de développeur complet. Chaque certification que j'ai choisie me prépare concrètement aux vraies missions que les entreprises vont me confier plus tard.</p>
+            </div>
+        </section>
+
+        <!-- CRITÈRE 2 : CONNAISSANCE DE L'OFFRE -->
+        <section id="offre" class="terminal-window reveal">
+            <div class="terminal-header">root@bts-sio:~# ./analyser_offre_certification.sh</div>
+            <div class="terminal-body">
+                <p class="highlight">> [ CRITÈRE 2 ] : Comment j'ai choisi mes certifications</p>
+                <p>Avant de me lancer, j'ai pris le temps de regarder ce qui existait sur internet et ce qui était le plus valorisé par les recruteurs. L'offre de formations est immense, j'ai donc essayé de varier mes choix en touchant à trois grands types de certifications :</p>
+                <br>
+                <ul style="list-style-type: square; margin-left: 20px; color: #ccc; margin-bottom: 15px;">
+                    <li style="margin-bottom: 10px;"><strong>Les certifications officielles et publiques :</strong> Comme l'ANSSI, la CNIL ou PIX. Ce sont des valeurs sûres, souvent gratuites et reconnues par l'État. Elles montrent qu'on connaît les règles de sécurité et la loi.</li>
+                    <li style="margin-bottom: 10px;"><strong>Les certifications liées à des outils précis :</strong> Comme Microsoft, WordPress ou Three.js. Là, on rentre dans la technique. Le but est de prouver qu'on sait manipuler des outils qui sont utilisés tous les jours en agence ou en entreprise.</li>
+                    <li><strong>Les plateformes d'entraînement :</strong> Comme RootMe. C'est beaucoup moins "scolaire". L'idée est de s'entraîner sur de vrais cas pratiques pour tester son niveau et apprendre par l'erreur.</li>
+                </ul>
+                <br>
+                <p>En informatique, les langages et les technologies changent tout le temps. Je sais très bien que les outils d'aujourd'hui ne seront plus les mêmes dans 5 ans. C'est pour cela que je me certifie aujourd'hui : ça me donne de bonnes bases pour commencer ma carrière, mais ça me donne surtout l'habitude d'apprendre par moi-même pour toujours rester à jour.</p>
+            </div>
+        </section>
+
+        <!-- LE CATALOGUE -->
+        <section id="certifs" class="terminal-window reveal">
+            <div class="terminal-header">root@bts-sio:~# ls -la /mes_certifications/</div>
+            <div class="terminal-body">
+                <p class="highlight" style="margin-bottom: 20px;">> Cliquez sur un dossier pour exécuter le dossier d'analyse complet.</p>
+                
+                <div class="grid-certifs">
+                    <div class="cert-card folder" data-modal="wordpress">
+                        <span>📁 Certification WordPress</span>
+                    </div>
+                    <div class="cert-card folder" data-modal="cnil">
+                        <span>📁 MOOC de la CNIL</span>
+                    </div>
+                    <div class="cert-card folder" data-modal="secnumacad">
+                        <span>📁 SecNumacadémie</span>
+                    </div>
+                    <div class="cert-card folder" data-modal="pix">
+                        <span>📁 Certification PIX</span>
+                    </div>
+                    <div class="cert-card folder" data-modal="office">
+                        <span>📁 Certification Office</span>
+                    </div>
+                    <div class="cert-card folder" data-modal="rootme">
+                        <span>📁 RootMe</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOCUS THE CREEP (THREE.JS) + PREUVE DE CONCEPT 3D -->
+        <section id="focus-projet" class="terminal-window reveal">
+            <div class="terminal-header">root@bts-sio:~# cd /projets_3d/ && cat the_creep.md</div>
+            <div class="terminal-body">
+                <h3 class="highlight" style="font-size: 1.5em; border-bottom: 1px dashed #00ff00; padding-bottom: 10px; margin-bottom: 20px;">[ FOCUS ] : De Unity à Three.js ("The Creep")</h3>
+                
+                <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                    
+                    <!-- Colonne Gauche : Mini-scène 3D live -->
+                    <div style="flex: 1; min-width: 300px;">
+                        
+                        <!-- C'est ici que la magie de la 3D va s'opérer -->
+                        <div id="threejs-container" class="three-container">
+                            <div class="three-label">[ RENDER : WEBGL / THREE.JS ]</div>
+                        </div>
+
+                        <span class="tag" style="background:#000; border: 1px solid #00ffff; color:#00ffff;">[ Gratuit ]</span>
+                        <span class="tag" style="background:#000; border: 1px solid #ff00ff; color:#ff00ff;">[ Autonomie Totale ]</span>
+                        <span class="tag" style="background:#000; border: 1px solid #ffff00; color:#ffff00;">[ JavaScript ]</span>
+                    </div>
+                    
+                    <!-- Colonne Droite : Explications -->
+                    <div style="flex: 2; min-width: 300px;">
+                        <p style="color:#00ff00; font-weight: bold;">> Le constat et le pivot technique :</p>
+                        <p style="color: #ccc; margin-bottom: 15px;">Initialement, j'avais l'ambition de développer un jeu complet sur le moteur <strong>Unity</strong>. Cependant, le projet s'est avéré beaucoup trop dense, notamment à cause des lourdes contraintes techniques (nécessité de faire tourner une Machine Virtuelle au lycée, lenteurs, complexité de l'éditeur). J'ai donc pris la décision stratégique d'abandonner Unity pour me tourner vers une solution plus agile, légère, et parfaitement adaptée à mon BTS SLAM : <strong>Three.js</strong>.</p>
+
+                        <p style="color:#00ffff; font-weight: bold;">> [ CRITÈRE 4 ] : Démarche entreprise (Three.js) :</p>
+                        <p style="color: #ccc; margin-bottom: 15px;">Three.js est une puissante bibliothèque JavaScript qui permet de créer des scènes 3D directement dans le navigateur Web (via WebGL). Pour maîtriser cet outil, j'ai adopté une démarche de développeur moderne : j'ai croisé la lecture de la <strong>documentation officielle</strong> avec des <strong>tutoriels ciblés sur YouTube</strong>, et j'ai sollicité des <strong>assistants IA</strong> pour m'aider à vulgariser des concepts mathématiques complexes (géométrie spatiale, vecteurs) et pour débugger mon code efficacement.</p>
+
+                        <p style="color:#ff00ff; font-weight: bold;">> [ CRITÈRE 5 ] : Explicitation des résultats obtenus :</p>
+                        <p style="color: #ccc; margin-bottom: 15px;">J'ai entièrement codé <strong>"The Creep"</strong>, un mini-jeu d'horreur en 3D généré dans un <strong>simple et unique fichier HTML</strong>. Cela m'a demandé une grande rigueur algorithmique pour gérer les collisions, les déplacements et l'ambiance lumineuse en JavaScript pur. Le rendu visuel ci-contre prouve ma capacité à intégrer ce moteur de rendu directement dans le DOM.</p>
+                        
+                        <a href="The Creep/creep.html" target="_blank" class="cmd-btn" style="text-decoration: none; display: inline-block; margin-bottom: 20px;">[ ▶ EXÉCUTER LA DÉMO COMPLÈTE : THE CREEP ]</a>
+                        
+                        <p style="color:#ffcc00; font-weight: bold;">> Conclusion & Adéquation Pro :</p>
+                        <p style="color: #ccc;">Cette auto-formation prouve ma capacité à m'adapter face à un obstacle technique et à utiliser les outils d'aujourd'hui (IA, ressources vidéo). Elle valide surtout une excellente maîtrise du langage JavaScript, m'ouvrant les portes du développement d'applications Web interactives modernes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="terminal-window reveal">
+            <div class="terminal-header">root@bts-sio:~# ./contact_info.sh</div>
+            <div class="terminal-body">
+                <p>> <strong>GitHub :</strong> <a href="https://github.com/EvanSurGit" target="_blank" class="highlight" style="text-decoration: none;">EvanSurGit</a></p>
+                <p>> <strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/evan-etheve" target="_blank" class="highlight" style="text-decoration: none;">Evan ETHEVE</a></p>
+                <p>> <strong>Email :</strong> <span class="highlight">evanethevepro@gmail.com</span></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- La Modale pour le catalogue -->
+    <dialog id="modal" class="modal">
+        <div class="modal__inner terminal-window" style="max-width: 900px; width: 95%;">
+            <div class="terminal-header" style="display: flex; justify-content: space-between;">
+                <span id="modalTitle">Dossier d'Analyse - Certification</span>
+                <button id="modalClose" class="cmd-btn-small">[X]</button>
+            </div>
+            <div class="terminal-body" id="modalBody" style="max-height: 80vh; overflow-y: auto; padding-right: 15px;">
+                <!-- Rempli par le JavaScript -->
+            </div>
+            <div style="text-align: right; padding: 10px 20px; border-top: 1px solid #333; margin-top: 10px;">
+                <button id="modalOk" class="cmd-btn">> Fermer</button>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Bibliothèque officielle Three.js (Importée depuis le CDN public) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Ton propre script -->
+    <script src="script.js"></script>
+</body>
+</html>
